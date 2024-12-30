@@ -1,10 +1,12 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'NuxtHub Starter',
-  description: 'A Nuxt template to build your full-stack application on the edge.'
+  title: 'SOSensible',
+  description: 'SOSensible is the home of servant oriented solutions aimed at living up to our name.',
 })
 </script>
 
 <template>
-  <NuxtPage />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
