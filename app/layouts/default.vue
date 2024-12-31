@@ -6,9 +6,9 @@
   <UApp>
     <UCard>
       <template #header>
-        <NuxtLink href="/" class="mr-2">Home</NuxtLink>
-        <NuxtLink href="/login" class="mr-2">Login</NuxtLink>
-        <NuxtLink href="/dashboard">Dashboard</NuxtLink>
+        <ULink href="/" class="mr-2">Home</ULink>
+        <ULink href="/login" class="mr-2">Login</ULink>
+        <ULink href="/dashboard">Dashboard</ULink>
       </template>
 
       <slot />

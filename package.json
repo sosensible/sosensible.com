@@ -3,17 +3,19 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --host --https",
     "build": "nuxt build",
     "preview": "npx nuxthub preview",
     "deploy": "npx nuxthub deploy",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxt typecheck",
+    "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
     "@nuxt/eslint": "^0.7.4",
     "@nuxthub/core": "^0.8.10",
+    "drizzle-orm": "^0.38.3",
     "nuxt": "^3.14.1592",
     "nuxt-auth-utils": "^0.5.7",
     "zod": "^3.24.1"
@@ -21,6 +23,7 @@
   "devDependencies": {
     "@nuxt/eslint-config": "^0.7.4",
     "@nuxt/ui": "3.0.0-alpha.10",
+    "drizzle-kit": "^0.30.1",
     "eslint": "^9.17.0",
     "vue-tsc": "^2.1.10",
     "wrangler": "3.99.0"
