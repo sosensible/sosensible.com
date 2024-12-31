@@ -15,6 +15,13 @@
       "when": 1735607368784,
       "tag": "0001_many_zodiak",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1735608564251,
+      "tag": "0002_massive_nightmare",
+      "breakpoints": true
     }
   ]
 }
