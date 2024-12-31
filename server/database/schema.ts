@@ -6,6 +6,7 @@ export const user = sqliteTable('user', {
   username: text().notNull(),
   email: text().notNull(),
   password: text().notNull(),
+  avatar: text().default(sql`('')`),
   created_at: integer().default(sql`(strftime('%s', 'now'))`),
   updated_at: integer().default(sql`(strftime('%s', 'now'))`),
 })
