@@ -1,10 +1,10 @@
+import { useDrizzle, tables } from "~~/server/utils/drizzle"
+import { desc } from 'drizzle-orm'
+
 export default eventHandler(async () => {
-  const db = hubDatabase()
+  const db = useDrizzle()
 
-  // TODO: move it a a Server Task
-  await db.exec('CREATE TABLE IF NOT EXISTS messages (id INTEGER PRIMARY KEY, text TEXT, created_at INTEGER)')
-
-  const { results } = await db.prepare('SELECT * FROM messages ORDER BY created_at DESC').all()
+  const results = await db.select().from(tables.messages).orderBy(desc(tables.messages.created_at))
 
   return results
 })
